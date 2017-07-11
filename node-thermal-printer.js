@@ -20,6 +20,10 @@ module.exports = {
       config = require('./configs/epsonConfig');
     }
 
+    if (initConfig.specialCharacters) {
+      config.specialCharacters = initConfig.specialCharacters;
+    }
+
     if(!initConfig.width) initConfig.width = 48;
     if(!initConfig.characterSet) initConfig.characterSet = "SLOVENIA";
     if(typeof(initConfig.removeSpecialCharacters) == "undefined") initConfig.removeSpecialCharacters = false;
